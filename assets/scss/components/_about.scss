@@ -1,16 +1,43 @@
 /*=============== ABOUT ===============*/
 .about{
-    &__container{
-        row-gap: 2rem;
+    #video_player {
+        display: table;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1000;
+        overflow: hidden;
     }
-    &__data{
-        text-align: center;
+    #video_player video,
+    #video_player figcaption {
+        display: table-cell;
+        vertical-align: top;
     }
-    &__description{
-        margin-bottom: var(--mb-2);
+    #video_player figcaption {
+        width: 25%;
     }
-    &__img{
-        width: 200px;
-        justify-self: center;
+    #video_player figcaption a {
+        display: block;
+        opacity: .5;
+        transition: 1s opacity;
+    }
+    #video_player figcaption a img,
+    figure video {
+        width: 100%;
+        height: auto;
+    }
+    #video_player figcaption a:hover {
+        opacity: 1;
+    }
+    @media (max-width: 700px) {
+        #video_player video,
+        #video_player figcaption {
+            display: table-row;
+        }
+        #video_player figcaption a {
+            display: inline-block;
+            width: 33.33%;
+        }
     }
 }

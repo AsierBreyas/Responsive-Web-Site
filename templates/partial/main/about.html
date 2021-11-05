@@ -1,13 +1,27 @@
 
 <div class="about__container container grid">
     <div class="about__data">
-        <h2 class="section__title about__title">About Halloween <br> Night</h2>
-        <p class="about__description">Night of all the saints, or all the dead, is celebrated on October 31 and it is a
-            very fun international celebration, this celebration comes from ancient origins, and is already
-            celebrated by everyone.
-        </p>
-        <a href="#" class="button">Know more</a>
+        <h2 class="section__title about__title">Spooky Video Player</h2>
+        <figure id="video_player">
+            <video poster="../assets/img/Comer_niños.png" >
+                <source src="../media/ComerNiños.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+                <a href=""><img src="../assets/img/Comer_niños.png" alt="Nambia Timelapse 1"></a>
+                <a href=""><img src="../assets/img/MAL.png" alt="Nambia Timelapse 2"></a>
+                <a href=""><img src="../assets/img/NosVamosADrogar.png" alt="Nambia Timelapse 3"></a>
+                <a href=""><img src="../assets/img/nos-pegan.png" alt="Nambia Timelapse 4"></a>
+            </figcaption>
+        </figure>
+        <div class=buttonholder>
+            <a href="" id="video-previous" class="material-icons text-body text decoration none" title="Previous">skip_previous</a>
+            <a href="" id="video-stop" class="material-icons text-body decoration none" title="Stop">stop</a>
+            <a href="" id="video-play" class="material-icons text-body decoration none" title="Play / Pause">play_arrow</a>
+            <a href="" id="video-next" class="material-icons text-body decoration none" title="Next">skip_next</a>
+            <div>
+                <progress id="video-playbar" max="100" value="0"></progress>
+            </div>
+            <p id="pVideo">Spooky Scary Skeletons</p>
+        </div>
     </div>
-
-    <img src="../assets/img/about-img.png" alt="" class="about__img">
 </div>
