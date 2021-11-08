@@ -1,5 +1,8 @@
 /*=============== ABOUT ===============*/
 .about{
+    #dVideo{
+        width: 80%;
+    }
     #video_player {
         display: table;
         min-width: 100%;
@@ -9,25 +12,28 @@
         z-index: -1000;
         overflow: hidden;
     }
+    video{
+        width: 100%;
+    }
     #video_player video,
     #video_player figcaption {
         display: table-cell;
         vertical-align: top;
     }
     #video_player figcaption {
-        width: 25%;
+        width: 20%;
+        height: 100%;
     }
-    #video_player figcaption a {
+    #video_player figcaption img {
         display: block;
         opacity: .5;
         transition: 1s opacity;
     }
-    #video_player figcaption a img,
-    figure video {
-        width: 100%;
+    #video_player figcaption img{
+        width: 25%;
         height: auto;
     }
-    #video_player figcaption a:hover {
+    #video_player figcaption img:hover {
         opacity: 1;
     }
     @media (max-width: 700px) {

@@ -1,16 +1,18 @@
 
-<div class="about__container container grid">
+<div class="about__container container">
     <div class="about__data">
         <h2 class="section__title about__title">Spooky Video Player</h2>
         <figure id="video_player">
-            <video poster="../assets/img/Comer_niños.png" >
+            <div id="dVideo">
+            <video poster="../assets/img/pComer_niños.png">
                 <source src="../media/ComerNiños.mp4" type="video/mp4">
             </video>
+            </div>
             <figcaption>
-                <a href=""><img src="../assets/img/Comer_niños.png" alt="Nambia Timelapse 1"></a>
-                <a href=""><img src="../assets/img/MAL.png" alt="Nambia Timelapse 2"></a>
-                <a href=""><img src="../assets/img/NosVamosADrogar.png" alt="Nambia Timelapse 3"></a>
-                <a href=""><img src="../assets/img/nos-pegan.png" alt="Nambia Timelapse 4"></a>
+                <img src="../assets/img/cComer_niños.png"  onclick="playVideo(0)">
+                <img src="../assets/img/bcMAL.png" onclick="playVideo(1)">
+                <img src="../assets/img/cNosVamosADrogar.png" onclick="playVideo(2)">
+                <img src="../assets/img/cnos-pegan.png" onclick="playVideo(3)">
             </figcaption>
         </figure>
         <div class=buttonholder>

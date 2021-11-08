@@ -4,21 +4,21 @@ const songs = [
     'media/Woah.mp3',
     'media/Doraemon.mp3',
     'media/Caballo Homosexual de las Montañas.mp3',
-]
+];
 const nSongs = [
     'Spooky Scary Skeletons',
     'Perdió su vida en el lol',
     'Woah',
     'Doraemon',
     'Caballo homosexual de las montañas',
-]
+];
 const imLink =[
     'https://i1.sndcdn.com/artworks-000431798787-gfse36-t500x500.jpg',
     'http://images.genius.com/5f7f26053f8dca98bd676b8b14ec99fd.332x187x1.jpg',
     'https://pm1.narvii.com/6592/04e819ff0f4eb5c937c672dee6af2a0ff2b5ecfc_hq.jpg',
     'https://yt3.ggpht.com/ytc/AKedOLQMSrgxItPwy1gW4nke8tyEXNImWjwt3upFTg7g=s900-c-k-c0x00ffffff-no-rj',
     'https://m.media-amazon.com/images/I/A1RG9R2dXlL._SS500_.jpg',
-]
+];
 const  audioEL = document.querySelector('#audio');
 const nombreCancion = document.querySelector('#pCancion');
 const imagen = document.querySelector('.image');

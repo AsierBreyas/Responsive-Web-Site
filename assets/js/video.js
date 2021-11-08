@@ -1,24 +1,24 @@
-const videos = [
-    'media/ComerNiños.mp3',
-    'media/MAL.mp3',
-    'media/NosVamosADrogar.mp3',
-    'media/NosPegan.mp3'
-]
-var video_player = document.getElementById("video_player");
-let current = 0;
+ const videos = [
+    'media/ComerNiños.mp4',
+    'media/MAL.mp4',
+    'media/NosVamosADrogar.mp4',
+    'media/NosPegan.mp4'
+];
+var video_player = document.getElementById("video_player").querySelector("video");
+let contador = 0;
 const playVideo = (id) => {
-    current = id;
-    video_player.querySelector('source').src = videos [current];
+    contador = id;
+    video_player.querySelector('source').src = videos [contador];
     video_player.load();
     video_player.play();
 };
 document.querySelector('#video-previous').addEventListener('click', (ev) =>{
     ev.preventDefault();
-    playVideo(current === 0 ? 3 : --current);
+    playVideo(contador === 0 ? 3 : --contador);
 });
 document.querySelector('#video-next').addEventListener('click', (ev) =>{
     ev.preventDefault();
-    playVideo(current === 3 ? 0 : ++current);
+    playVideo(contador === 3 ? 0 : ++contador);
 });
 document.querySelector('#video-play').addEventListener('click',(ev) => {
     ev.preventDefault();
