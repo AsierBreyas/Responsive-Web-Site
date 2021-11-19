@@ -1,14 +1,23 @@
- const videos = [
+const videos = [
     'media/ComerNiños.mp4',
     'media/MAL.mp4',
     'media/NosVamosADrogar.mp4',
-    'media/NosPegan.mp4'
+    'media/Wrys.mp4'
+];
+const nombres = [
+    'Comer Niños',
+    'Mal',
+    'Nos vamos a drogar',
+    'Wrys'
 ];
 var video_player = document.getElementById("video_player").querySelector("video");
+var video_name = document.querySelector("#pVideo");
 let contador = 0;
+video_player.requestFullscreen();
 const playVideo = (id) => {
     contador = id;
     video_player.querySelector('source').src = videos [contador];
+    video_name.textContent = nombres[contador];
     video_player.load();
     video_player.play();
 };
@@ -41,13 +50,23 @@ document.querySelector('#video-stop').addEventListener('click',(ev) => {
     video_player.pause();
     video_player.currentTime = 0;
 });
-const playbar = document.querySelector('#video-playbar');
+const barra = document.querySelector('#video-playbar');
 //const textCurrent = document.querySelector('.time-current');
 video_player.addEventListener('timeupdate',(ev) =>{
-    playbar.value = video_player.currentTime / video_player.duration * 100;
+    barra.value = video_player.currentTime / video_player.duration * 100;
 });
-playbar.addEventListener('click',(ev) =>{
-    const newTime = ev.offsetX / playbar.offsetWidth;
-    playbar.value = `${newTime * 100}`;
-    video_player.currentTime = newTime * audioEL.duration;
+barra.addEventListener('click',(ev) =>{
+    const newtime = ev.offsetX / barra.offsetWidth;
+    barra.value = `${newtime * 100}`;
+    video_player.currentTime = newtime * audioEL.duration;
+});
+const fullscreen = document.querySelector('#video-fullscreen');
+function getFullscreen(element){
+    if(element.requestFullscreen) {
+        element.requestFullscreen();
+    }
+}
+fullscreen.addEventListener('click', (ev) =>{
+    ev.preventDefault();
+    getFullscreen(video_player);
 });
